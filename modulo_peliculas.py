@@ -21,6 +21,30 @@ def crear_pelicula(nombre: str, genero: str, duracion: int, anio: int,
 #Pelicula1 = mod.crear_pelicula("Volver al Futuro", "Infantil,Ciencia Ficcion", 116, 1985,'Todos', 1500, "Sabado")
 Crear_Pelicula('Volver al Futuro','Infantil/'  'Ciencia Ficcion', 116,1985, 'Todos', 1500, 'Sabado')
 
+def Crear_Pelicula(nombre: str, genero: str, duracion: int, anio: int,
+                  clasificacion: str, hora: int, dia: str) -> dict:
+    """Crea un diccionario que representa una nueva película con toda su información
+       inicializada.
+    Parámetros:
+        nombre (str): Nombre de la pelicula agendada.
+        genero (str): Generos de la pelicula separados por comas.
+        duracion (int): Duracion en minutos de la pelicula
+        anio (int): Anio de estreno de la pelicula
+        clasificacion (str): Clasificacion de restriccion por edad
+        hora (int): Hora a la cual se planea ver la pelicula, esta debe estar entre
+                    0 y 2359
+        dia (str): Dia de la semana en el cual se planea ver la pelicula.
+    Retorna:
+        dict: Diccionario con los datos de la pelicula
+    """
+    #TODO: completar y remplazar la siguiente línea por el resultado correcto
+    Pelicula={'nombre':nombre, 'genero':genero, 'duracion':duracion, 'anio':anio, 'clasificacion':clasificacion, 'hora':hora, 'dia':dia}
+
+    return Pelicula
+#Pelicula2 = mod.crear_pelicula("Jumanji", "Infantil,Aventura", 100, 1995,'Todos', 1700, "Domingo")
+Crear_Pelicula('Jumanji','Infantil/'  'Aventura', 100,1995, 'Todos', 1700, 'Dommingo')
+
+
 
 def encontrar_pelicula(nombre_pelicula: str, p1: dict, p2: dict, p3: dict, p4: dict,  p5: dict) -> dict:
     """Encuentra en cual de los 5 diccionarios que se pasan por parametro esta la 
