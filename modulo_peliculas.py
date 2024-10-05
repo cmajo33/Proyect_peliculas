@@ -18,34 +18,17 @@ def crear_pelicula(nombre: str, genero: str, duracion: int, anio: int,
      Pelicula={'nombre':nombre, 'genero':genero, 'duracion':duracion, 'anio':anio, 'clasificacion':clasificacion, 'hora':hora, 'dia':dia}
 
     return Pelicula
-#Pelicula1 = mod.crear_pelicula("Volver al Futuro", "Infantil,Ciencia Ficcion", 116, 1985,'Todos', 1500, "Sabado")
-Crear_Pelicula('Volver al Futuro','Infantil/'  'Ciencia Ficcion', 116,1985, 'Todos', 1500, 'Sabado')
 
-def Crear_Pelicula(nombre: str, genero: str, duracion: int, anio: int,
-                  clasificacion: str, hora: int, dia: str) -> dict:
-    """Crea un diccionario que representa una nueva película con toda su información
-       inicializada.
-    Parámetros:
-        nombre (str): Nombre de la pelicula agendada.
-        genero (str): Generos de la pelicula separados por comas.
-        duracion (int): Duracion en minutos de la pelicula
-        anio (int): Anio de estreno de la pelicula
-        clasificacion (str): Clasificacion de restriccion por edad
-        hora (int): Hora a la cual se planea ver la pelicula, esta debe estar entre
-                    0 y 2359
-        dia (str): Dia de la semana en el cual se planea ver la pelicula.
-    Retorna:
-        dict: Diccionario con los datos de la pelicula
-    """
-    #TODO: completar y remplazar la siguiente línea por el resultado correcto
-    Pelicula={'nombre':nombre, 'genero':genero, 'duracion':duracion, 'anio':anio, 'clasificacion':clasificacion, 'hora':hora, 'dia':dia}
+p1=crear_pelicula('Volver al Futuro','Infantil/'  'Ciencia Ficcion', 116,1985, 'Todos', 1500, 'Sabado')
+p2=crear_pelicula('Jumanji','Infantil/'  'Aventura', 100,1995, 'Todos', 1700, 'Dommingo')
+p3=crear_pelicula('El Conjuro','Terror/'  'Misterio', 112,2013, '17+', 2100, 'Viernes')
+p4=crear_pelicula('Trampa en alta mar','Suspenso/'  'Crimen', 88,2024, '12+', 1930, 'Miercoles')
+p5=crear_pelicula('Hombres de Negro','Accion/'  'Ciencia Ficcion Humoristica', 98,1997, '7+', 1340, 'Martes')
 
-    return Pelicula
-#Pelicula2 = mod.crear_pelicula("Jumanji", "Infantil,Aventura", 100, 1995,'Todos', 1700, "Domingo")
-Crear_Pelicula('Jumanji','Infantil/'  'Aventura', 100,1995, 'Todos', 1700, 'Dommingo')
+d={p1['nombre']:p1, p2['nombre']:p2, p3['nombre']:p3, p4['nombre']:p4, p5['nombre']:p5}
+print(d)
 
-
-
+        
 def encontrar_pelicula(nombre_pelicula: str, p1: dict, p2: dict, p3: dict, p4: dict,  p5: dict) -> dict:
     """Encuentra en cual de los 5 diccionarios que se pasan por parametro esta la 
        pelicula cuyo nombre es dado por parametro.
